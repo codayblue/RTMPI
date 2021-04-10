@@ -1,0 +1,13 @@
+diff --git a/scripts/qcow2_handling b/scripts/qcow2_handling
+index f722937..ef472cb 100644
+--- a/scripts/qcow2_handling
++++ b/scripts/qcow2_handling
+@@ -16,7 +16,7 @@ export MAP_ROOT_DEV
+ 
+ # find and initialize free block device nodes
+ init_nbd() {
+-	modprobe nbd max_part=16
++	#modprobe nbd max_part=16
+ 	if [ -z "${NBD_DEV}" ]; then
+ 	for x in /sys/class/block/nbd* ; do
+ 		S=`cat $x/size`
